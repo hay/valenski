@@ -1,0 +1,18 @@
+{
+  "name": "valenski",
+  "description": "A set of SASS mixins, classes and values that might be useful in addition to Bootstrap.",
+  "version": "0.1.0",
+  "keywords": [
+    "css",
+    "scss",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "web"
+  ],
+  "homepage": "http://github.com/hay/valenski",
+  "main": [
+    "valenski.scss"
+  ]
+}

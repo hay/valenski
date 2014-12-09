@@ -1,0 +1,22 @@
+@mixin respond-from($min) {
+    @media (min-width: $min) {
+        @content;
+    }
+}
+
+@mixin respond-until($max) {
+    @media (max-width: $max - 1) {
+        @content;
+    }
+}
+
+@mixin respond-between($min, $max) {
+    @media (min-width: $min) and (max-width: $max - 1) {
+        @content;
+    }
+}
+
+@mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+}

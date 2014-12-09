@@ -1,0 +1,17 @@
+// Bootstrap has no vertical spacing between rows, which
+// can be pretty handy at times, although i believe the
+// buffer-top, buffer-bottom and buffer nothing is a kludge
+@for $i from 0 through 10 {
+    .buffer-#{$i} {
+        margin-top: ($valenski-base-unit / 2) * $i;
+        margin-bottom: ($valenski-base-unit / 2) * $i;
+    }
+
+    .buffer-top-#{$i} {
+        margin-top: $valenski-base-unit * $i;
+    }
+
+    .buffer-bottom-#{$i} {
+        margin-bottom: $valenski-base-unit * $i;
+    }
+}
