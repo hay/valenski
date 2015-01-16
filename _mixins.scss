@@ -20,3 +20,17 @@
     width: $width;
     height: $height;
 }
+
+@mixin pos($coords...) {
+    @if length($coords) == 1 {
+        top: nth($coords, 1);
+        right: nth($coords, 1);
+        bottom: nth($coords,1);
+        left: nth($coords, 1);
+    } @else {
+        top: nth($coords, 1);
+        right: nth($coords, 2);
+        bottom: nth($coords, 3);
+        left: nth($coords, 4);
+    }
+}
