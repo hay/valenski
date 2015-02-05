@@ -34,3 +34,9 @@
         left: nth($coords, 4);
     }
 }
+
+@mixin center-flex {
+    @include display-flex;
+    @include justify-content(center);
+    @include align-items(center);
+}

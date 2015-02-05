@@ -1,7 +1,7 @@
 {
   "name": "valenski",
   "description": "A set of SASS mixins, classes and values that might be useful in addition to Bootstrap.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "keywords": [
     "css",
     "scss",

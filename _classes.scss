@@ -15,3 +15,7 @@
         margin-bottom: $valenski-base-unit * $i;
     }
 }
+
+.center-flex {
+    @include center-flex;
+}
