@@ -1,8 +1,7 @@
 Valenski
 ========
 
-A set of [SASS](http://sass-lang.com/) mixins, classes and values
-that might be useful in addition to [Bootstrap](http://getbootstrap.com).
+A set of [SASS](http://sass-lang.com/) mixins, classes and values that might come in handy at times.
 
 # Installation
 

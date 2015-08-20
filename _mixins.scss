@@ -35,8 +35,16 @@
     }
 }
 
-@mixin center-flex {
-    @include display-flex;
-    @include justify-content(center);
-    @include align-items(center);
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin background-center($size: cover) {
+    background-size: $size;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
