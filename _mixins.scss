@@ -48,3 +48,20 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+@mixin transform-center-horizontal {
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+
+@mixin transform-center-vertical {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+@mixin transform-center {
+    @include transform-center-horizontal;
+    @include transform-center-vertical;
+}
