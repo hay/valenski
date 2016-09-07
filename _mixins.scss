@@ -67,3 +67,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin flex-center($direction: column) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}

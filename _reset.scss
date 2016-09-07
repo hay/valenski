@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+// Set up stuff for rems, so 1rem = 10px. On mobile and screens with very
+// small height, set it to 8px
+html {
+    font-size: 10px;
+
+    @include respond-until($screen-sm) {
+        font-size: 8px;
+    }
+
+    @media (max-height: 650px) {
+        font-size: 8px;
+    }
+}
+
+body {
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+}
+
+img {
+    border: 0; // Be kind for IE9
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+    background: none;
+    border: 0;
+}
