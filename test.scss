@@ -19,7 +19,11 @@
 }
 
 .wh {
-    @include wh(200px, 200px);
+    @include wh(200px, 300px);
+}
+
+.wh2 {
+    @include wh(200px); // One argument makes width and height equal
 }
 
 .pos {

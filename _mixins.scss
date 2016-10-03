@@ -16,9 +16,14 @@
     }
 }
 
-@mixin wh($width, $height) {
+@mixin wh($width, $height: none) {
     width: $width;
-    height: $height;
+
+    @if($height == none) {
+        height: $width;
+    } @else {
+        height: $height;
+    }
 }
 
 @mixin pos($coords...) {
