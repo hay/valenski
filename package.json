@@ -11,8 +11,5 @@
     "front-end",
     "web"
   ],
-  "homepage": "http://github.com/hay/valenski",
-  "main": [
-    "valenski.scss"
-  ]
+  "homepage": "http://github.com/hay/valenski"
 }
