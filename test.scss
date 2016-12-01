@@ -42,3 +42,15 @@
 .background-center {
     @include background-center(contain);
 }
+
+.margin-center {
+    @include margin-center;
+}
+
+.child-margins {
+    @include child-margins;
+}
+
+.child-margins-argument {
+    @include child-margins(30px);
+}
