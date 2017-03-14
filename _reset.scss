@@ -35,3 +35,8 @@ button {
     background: none;
     border: 0;
 }
+
+// These elements don't inherit the font styles by default
+input, select, textarea, button {
+    font: inherit;
+}
