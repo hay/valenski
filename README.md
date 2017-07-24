@@ -1,9 +1,9 @@
-Valenski
-========
+# valenski
+## the minimal SASS library
 
-A lightweight set of [SASS](http://sass-lang.com/) mixins, classes, resets and values that might come in handy at times.
+**valenski** is a lightweight set of [SASS](http://sass-lang.com/) mixins, classes, resets and values that simplify your workflow
 
-# Installation
+## Installation
 
     bower install valenski
 
