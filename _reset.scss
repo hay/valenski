@@ -8,14 +8,14 @@
 // Set up stuff for rems, so 1rem = 10px. On mobile and screens with very
 // small height, set it to 8px
 html {
-    font-size: 10px;
+    font-size: $valenski-font-size-base;
 
     @include respond-until($screen-sm) {
-        font-size: 8px;
+        font-size: $valenski-font-size-small;
     }
 
-    @media (max-height: 650px) {
-        font-size: 8px;
+    @media (max-height: $valenski-screen-small-height) {
+        font-size: $valenski-font-size-small;
     }
 }
 

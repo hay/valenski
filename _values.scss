@@ -4,4 +4,8 @@ $screen-sm: 768px !default;
 $screen-md: 992px !default;
 $screen-lg: 1200px !default;
 
+$valenski-screen-small-height: 650px !default; // Screens with a small height (not width!)
+
 $valenski-base-unit: 10px !default;
+$valenski-font-size-base: $valenski-base-unit !default; // Used for setting up rems
+$valenski-font-size-small: 8px !default; // Used for setting up rems on mobile / small screens
