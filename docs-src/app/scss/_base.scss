@@ -18,6 +18,14 @@ h1 {
     font-size: 6rem;
 }
 
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-weight: normal;
+}
+
 ul {
     margin-left: 3rem;
 }
@@ -29,11 +37,14 @@ main > p:nth-of-type(1) {
     text-align: center;
 }
 
-main > p:nth-of-type(2) {
+main > p:nth-of-type(2),
+main > p:nth-of-type(3) {
     text-align: center;
 }
 
 pre {
     background: $c-2;
     padding: 1rem;
+    font-size: 1.6rem;
+    overflow-x: auto;
 }

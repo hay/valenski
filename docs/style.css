@@ -108,11 +108,6 @@
 .buffer-bottom-10 {
   margin-bottom: 100px !important; }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both; }
-
 * {
   margin: 0;
   padding: 0;
@@ -167,6 +162,12 @@ h1 {
   color: #6b6db7;
   font-size: 6rem; }
 
+a {
+  text-decoration: none; }
+
+h3 {
+  font-weight: normal; }
+
 ul {
   margin-left: 3rem; }
 
@@ -175,11 +176,14 @@ main > p:nth-of-type(1) {
   font-size: 3rem;
   text-align: center; }
 
-main > p:nth-of-type(2) {
+main > p:nth-of-type(2),
+main > p:nth-of-type(3) {
   text-align: center; }
 
 pre {
   background: #ddd;
-  padding: 1rem; }
+  padding: 1rem;
+  font-size: 1.6rem;
+  overflow-x: auto; }
 
 

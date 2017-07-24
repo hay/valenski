@@ -1,5 +1,3 @@
-// Bootstrap has no vertical spacing between rows, which
-// can be pretty handy at times, bit of a kludge though
 @for $i from 0 through 10 {
     .buffer-#{$i} {
         margin-top: ($valenski-base-unit / 2) * $i !important;
