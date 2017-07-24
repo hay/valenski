@@ -145,4 +145,41 @@ button {
 input, select, textarea, button {
   font: inherit; }
 
+.center {
+  text-align: center; }
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.8rem;
+  background: #6b6db7; }
+
+main {
+  background: white;
+  max-width: 80rem;
+  padding: 3rem 1rem;
+  margin-left: auto;
+  margin-right: auto; }
+  main > * + * {
+    margin-top: 2rem; }
+
+h1 {
+  text-align: center;
+  color: #6b6db7;
+  font-size: 6rem; }
+
+ul {
+  margin-left: 3rem; }
+
+main > p:nth-of-type(1) {
+  margin-top: 0;
+  font-size: 3rem;
+  text-align: center; }
+
+main > p:nth-of-type(2) {
+  text-align: center; }
+
+pre {
+  background: #ddd;
+  padding: 1rem; }
+
 
