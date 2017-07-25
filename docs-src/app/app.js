@@ -1,2 +1,5 @@
 var html = require('README.md');
-document.querySelector('main').innerHTML = html;
+// var aside = require('aside.md');
+var $ = document.querySelector.bind(document);
+
+$('main').innerHTML = html;

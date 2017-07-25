@@ -3,7 +3,7 @@
 
 **valenski** is a lightweight set of [SASS](http://sass-lang.com/) mixins, classes, resets and values that simplify your workflow. By [Hay Kranen](http://github.com/hay).
 
-[Github repo](https://github.com/hay/valenski)
+<aside class="aside"></aside>
 
 ## Philosophy
 **valenski** was written because i needed it. I produce around a static website every week with very different requirements and designs, so something like [Bootstrap](http://getbootstrap.com/) is far too heavy and opinionated. After producing more than 100 websites in two years i discovered that the only things i always needed where:
@@ -87,11 +87,45 @@ If only one argument is given, `pos` will set the same value to all properties.
 ### `clearfix`
 A mixin for the famous [clearfix](https://css-tricks.com/snippets/css/clear-fix/) hack.
 
+    .clearfix {
+        @include clearfix;
+    }
+
 ### `transform-center-*`
-Centering elements using the [transform](https://css-tricks.com/centering-percentage-widthheight-elements/) hack. Either horizontal (`transform-center-horizontal`), vertical (`transform-center-vertical`) or both (`transform-center`).
+Centers an element using the [transform](https://css-tricks.com/centering-percentage-widthheight-elements/) hack. Either horizontal (`transform-center-horizontal`), vertical (`transform-center-vertical`) or both (`transform-center`).
+
+    body {
+        position: relative;
+        @include wh(100vw, 100vh);
+    }
+
+    h1 {
+        @include transform-center; // center both horizontally and vertically
+    }
+
+    h2 {
+        @include transform-center-horizontal; // only center horizontally
+    }
+
+    h3 {
+        @include transform-center-vertically; // only center vertically
+    }
 
 ### `flex-center`
-Center elements using flexbox.
+Center child elements using flexbox. Compare this to the [transform-center](#-transform-center-) mixins that centers the element you apply it to. If you have more than one child elements they will be aligned on the vertical axis. To align horizontally try `@include flex-center(row);`
+
+    body {
+        @include flex-center;
+    }
+
+    h1 {
+        // this element will be centered
+    }
+
+    ul {
+        // centers child elements on horizontal axis
+        @include flex-center(row);
+    }
 
 ### `child-margins`
 Set `margin-top` on all child elements using the [lobotomized owl selector](https://alistapart.com/article/axiomatic-css-and-lobotomized-owls). By default uses the `$valenski-base-unit` variable.
@@ -101,7 +135,17 @@ Set `margin-top` on all child elements using the [lobotomized owl selector](http
     }
 
 ### `background-center`
-Center the `background-image`, sizing it by `cover` by default (can be overridden).
+Center the `background-image`, by default sizing with the `cover` option. If you want to size with the `contain` option you can give that as an option.
+
+    figure {
+        @include background-center;
+        background-image: url('img/figure.jpg');
+    }
+
+    body {
+        @include background-center(contain);
+        background-image: url('img/background.jpg');
+    }
 
 ## Values
 **valenski** contains a couple of breakpoints variables for mediaqueries and some variables that set defaults for mixins, resets and classes.
