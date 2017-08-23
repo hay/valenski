@@ -176,6 +176,13 @@ Center the `background-image`, by default sizing with the `cover` option. If you
         background-image: url('img/background.jpg');
     }
 
+### `screen-reader-only`
+Can be used to show an element exclusively for screen readers. For example, you could use this mixin when you have an image as a header but still want to provide a textual alternative for screen reader users. There's a related utility class called [`sr-only`](#-sr-only-).
+
+    h1 {
+        @include screen-reader-only;
+    }
+
 ## Values
 **valenski** contains a couple of breakpoints variables for mediaqueries and some variables that set defaults for mixins, resets and classes.
 
@@ -205,9 +212,19 @@ These are lifted from [Bootstrap](http://getbootstrap.com/css/#grid-options).
     }
 
 ## Classes
-**valenski** contains `buffer-*` classes that can be used for vertical spacing between elements. The spacing is based on the [`$valenski-base-unit` variable](#valenski-variables) (by default this is 10px). For example:
+**valenski** contains a couple of classes for utility purposes.
+
+### `buffer-*` classes
+These classes can be used for vertical spacing between elements. The spacing is based on the [`$valenski-base-unit` variable](#valenski-variables) (by default this is 10px). For example:
 
     <header class="buffer-3"> <!-- Add 15px margin add the top and bottom -->
         <h1 class="buffer-bottom-1">Header with 10px margin at the bottom</h1>
         <h2 class="buffer-top-0">Subheader with no margin at top</h2>
     </header>
+
+### `sr-only`
+This is a class that can be used to show an element exclusively for screen readers. For example, you could use this class when you have an image as a header but still want to provide a textual alternative for screen reader users. There's a related mixin called [`screen-reader-only`](#-screen-reader-only-).
+
+    <h1 class="sr-only">Heading</h1>
+
+    <img src="img/heading.jpg" alt="This is a picture of the heading" />

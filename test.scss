@@ -61,3 +61,7 @@
 .child-margins-argument {
     @include child-margins(30px);
 }
+
+.screen-reader-only {
+    @include screen-reader-only;
+}

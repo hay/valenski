@@ -1,14 +1,2 @@
-@for $i from 0 through 10 {
-    .buffer-#{$i} {
-        margin-top: ($valenski-base-unit / 2) * $i !important;
-        margin-bottom: ($valenski-base-unit / 2) * $i !important;
-    }
-
-    .buffer-top-#{$i} {
-        margin-top: $valenski-base-unit * $i !important;
-    }
-
-    .buffer-bottom-#{$i} {
-        margin-bottom: $valenski-base-unit * $i !important;
-    }
-}
+@import "buffer";
+@import "utilities";
