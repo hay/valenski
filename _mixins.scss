@@ -28,11 +28,17 @@
 
 @mixin pos($coords...) {
     @if length($coords) == 1 {
+        // All positions get the same value
         top: nth($coords, 1);
         right: nth($coords, 1);
         bottom: nth($coords,1);
         left: nth($coords, 1);
+    } @else if length($coords) == 2 {
+        // Only give left/top (x,y)
+        left: nth($coords, 1);
+        top: nth($coords, 2);
     } @else {
+        // Give positions in top-right-bottom-left order
         top: nth($coords, 1);
         right: nth($coords, 2);
         bottom: nth($coords, 3);

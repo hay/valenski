@@ -80,10 +80,39 @@ You can use `respond-from`, `respond-until` and `respond-between` to simplify th
         @include pos(50vh, 25%, 25%, 10rem);
     }
 
+This is the same as writing
+
+    .footer {
+        top: 50vh;
+        right: 25%;
+        bottom: 25%;
+        left: 10rem;
+    }
+
+If only two arguments are given these will be used for the `left` and `top` properties (think of them as `x` and `y`)
+
+    .circle {
+        @include pos(300px, 200px);
+    }
+
+    .circle {
+        left: 300px;
+        top: 200px;
+    }
+
 If only one argument is given, `pos` will set the same value to all properties.
 
     .overlay {
         @include pos(0);
+    }
+
+This is the same as:
+
+    .overlay {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
 
 ### `clearfix`
