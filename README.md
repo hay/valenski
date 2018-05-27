@@ -1,6 +1,8 @@
 # valenski
 **the minimal SASS library**
 
+[**Source on Github**](https://github.com/hay/valenski)
+
 **valenski** is a lightweight set of [SASS](http://sass-lang.com/) mixins, classes, resets and values that simplify your workflow. By [Hay Kranen](http://github.com/hay).
 
 <aside class="aside"></aside>
@@ -14,9 +16,9 @@
 * Optional buffer classes for overwriting default margins on elements.
 
 ## Installation
-**valenski** only works with [SASS](http://sass-lang.com/). You'll probably want to use a package manager, such as [npm](https://www.npmjs.com/) or [bower](https://bower.io/). Then add it to your project:
+**valenski** only works with [SASS](http://sass-lang.com/). You'll probably want to use a package manager, such as [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/lang/en/). Then add it to your project:
 
-    npm install valenski
+    npm install --save valenski
 
 And include the master file in your SASS file.
 
@@ -182,3 +184,5 @@ These are lifted from [Bootstrap](http://getbootstrap.com/css/#grid-options).
         <h1 class="buffer-bottom-1">Header with 10px margin at the bottom</h1>
         <h2 class="buffer-top-0">Subheader with no margin at top</h2>
     </header>
+
+[**Source on Github**](https://github.com/hay/valenski)
