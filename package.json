@@ -15,7 +15,7 @@
     "build-docs": "rm -rf docs && parcel build docs-src/index.html -d docs --no-content-hash --public-url '.' && rm docs/*.map",
     "dev-docs": "parcel docs-src/index.html"
   },
-  "homepage": "http://github.com/hay/valenski",
+  "homepage": "https://hay.github.io/valenski/",
   "devDependencies": {
     "marked": "^0.8.0",
     "parcel-bundler": "^1.12.4",
