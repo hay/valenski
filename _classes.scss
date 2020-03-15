@@ -12,3 +12,7 @@
         margin-bottom: $valenski-base-unit * $i !important;
     }
 }
+
+.sr-only {
+    @include sr-only;
+}

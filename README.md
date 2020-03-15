@@ -178,6 +178,13 @@ Center the `background-image`, by default sizing with the `cover` option. If you
         background-image: url('img/background.jpg');
     }
 
+### `sr-only`
+Only display content to screen readers. This is the same mixin as used in [Bootstrap 4](https://github.com/twbs/bootstrap/blob/master/scss/mixins/_screen-reader.scss). Note that you can also use the `sr-only` class.
+
+    .sr-notice {
+        @include sr-only;
+    }
+
 ## Values
 **valenski** contains a couple of breakpoints variables for mediaqueries and some variables that set defaults for mixins, resets and classes.
 
@@ -213,5 +220,10 @@ These are lifted from [Bootstrap](http://getbootstrap.com/css/#grid-options).
         <h1 class="buffer-bottom-1">Header with 10px margin at the bottom</h1>
         <h2 class="buffer-top-0">Subheader with no margin at top</h2>
     </header>
+
+There is also a `sr-only` class you can use to only display content to screen readers.
+
+    <img src="logo.png" alt="Website logo" />
+    <h1 class="sr-only">My briliant website</h1>
 
 [**Source on Github**](https://github.com/hay/valenski)
