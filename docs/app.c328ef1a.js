@@ -29,4 +29,4 @@ module.exports=function(t){return fetch(t).then(function(t){return t.text()})};
 },{}],0:[function(require,module,exports) {
 var b=require("TUK3");b.register("html",require("A3BY"));b.load([["README.78e7bab3.html","OviO"]]).then(function(){require("A2T1");});
 },{}]},{},[0], null)
-//# sourceMappingURL=/app.c328ef1a.js.map
+//# sourceMappingURL=app.c328ef1a.js.map

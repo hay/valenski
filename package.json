@@ -12,7 +12,7 @@
     "web"
   ],
   "scripts": {
-    "build-docs": "rm -rf docs && parcel build docs-src/index.html -d docs --no-content-hash && rm docs/*.map",
+    "build-docs": "rm -rf docs && parcel build docs-src/index.html -d docs --no-content-hash --public-url '.' && rm docs/*.map",
     "dev-docs": "parcel docs-src/index.html"
   },
   "homepage": "http://github.com/hay/valenski",
