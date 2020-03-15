@@ -8,7 +8,7 @@
 <aside class="aside"></aside>
 
 ## Philosophy
-**valenski** was written because i needed it. I produce around a static website every week with very different requirements and designs, so something like [Bootstrap](http://getbootstrap.com/) is far too heavy and opinionated. After producing more than 100 websites in two years i discovered that the only things i always needed where:
+**valenski** was written because i needed it. I produce many static websites with very different requirements and designs, so something like [Bootstrap](http://getbootstrap.com/) is far too heavy and opinionated. After producing more than 100 websites in two years i discovered that the only things i always needed where:
 
 * A very bare-bones CSS reset that puts an emphasis on using the [rem unit](https://www.sitepoint.com/understanding-and-using-rem-units-in-css/).
 * Some SASS variables for common responsive breakpoints.
@@ -225,5 +225,3 @@ There is also a `sr-only` class you can use to only display content to screen re
 
     <img src="logo.png" alt="Website logo" />
     <h1 class="sr-only">My briliant website</h1>
-
-[**Source on Github**](https://github.com/hay/valenski)

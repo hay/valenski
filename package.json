@@ -11,5 +11,15 @@
     "front-end",
     "web"
   ],
-  "homepage": "http://github.com/hay/valenski"
+  "scripts": {
+    "build-docs": "rm -rf docs && parcel build docs-src/index.html -d docs --no-content-hash && rm docs/*.map",
+    "dev-docs": "parcel docs-src/index.html"
+  },
+  "homepage": "http://github.com/hay/valenski",
+  "devDependencies": {
+    "marked": "^0.8.0",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.3",
+    "showdown": "^1.9.1"
+  }
 }
