@@ -13,13 +13,14 @@ $valenski-use-small-font-size: true !default; // If this is set to false, the sm
 
 // CSS variables with the same contents
 :root {
-    --screen-xs: $screen-xs;
-    --screen-sm: $screen-sm;
-    --screen-md: $screen-md;
-    --screen-lg: $screen-lg;
+    --screen-xs: #{$screen-xs};
+    --screen-sm: #{$screen-sm};
+    --screen-md: #{$screen-md};
+    --screen-lg: #{$screen-lg};
 
-    --valenski-screen-small-height: $valenski-screen-small-height;
-    --valenski-base-unit: $valenski-base-unit;
-    --valenski-font-size-base: $valenski-font-size-base;
-    --valenski-font-size-small: $valenski-font-size-small;
+    --valenski-screen-small-height: #{$valenski-screen-small-height};
+    --valenski-base-unit: #{$valenski-base-unit};
+    --valenski-font-size-base: #{$valenski-font-size-base};
+    --valenski-font-size-small: #{$valenski-font-size-small};
+    --valenski-use-small-font-size: #{$valenski-use-small-font-size};
 }
