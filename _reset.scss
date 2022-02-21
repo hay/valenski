@@ -10,12 +10,14 @@
 html {
     font-size: $valenski-font-size-base;
 
-    @include respond-until($screen-sm) {
-        font-size: $valenski-font-size-small;
-    }
+    @if $valenski-use-small-font-size {
+        @include respond-until($screen-sm) {
+            font-size: $valenski-font-size-small;
+        }
 
-    @media (max-height: $valenski-screen-small-height) {
-        font-size: $valenski-font-size-small;
+        @media (max-height: $valenski-screen-small-height) {
+            font-size: $valenski-font-size-small;
+        }
     }
 }
 
