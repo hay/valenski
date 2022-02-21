@@ -1,5 +1,6 @@
 .cache
+.parcel-cache
 dist
 node_modules
 .sass-cache
-npm-debug.log
+npm-debug.logd

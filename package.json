@@ -12,15 +12,18 @@
     "web"
   ],
   "scripts": {
-    "build-docs": "rm -rf docs && parcel build docs-src/index.html -d docs --no-content-hash --public-url '.' && rm docs/*.map",
+    "build-docs": "rm -rf docs && parcel build docs-src/index.html --dist-dir docs --no-content-hash --public-url '.' && rm docs/*.map",
     "dev-docs": "parcel docs-src/index.html",
-    "test" : "npx sass test.scss /dev/null --verbose --no-source-map"
+    "test": "npx sass test.scss /dev/null --verbose --no-source-map"
   },
   "homepage": "https://hay.github.io/valenski/",
   "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.3.2",
+    "@parcel/transformer-sass": "^2.3.2",
+    "sass": "^1.49.8"
+  },
+  "dependencies": {
     "marked": "^4.0.12",
-    "parcel-bundler": "^1.12.4",
-    "sass": "^1.49.8",
-    "showdown": "^2.0.0"
+    "parcel": "^2.3.2"
   }
 }
