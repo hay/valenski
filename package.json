@@ -13,13 +13,14 @@
   ],
   "scripts": {
     "build-docs": "rm -rf docs && parcel build docs-src/index.html -d docs --no-content-hash --public-url '.' && rm docs/*.map",
-    "dev-docs": "parcel docs-src/index.html"
+    "dev-docs": "parcel docs-src/index.html",
+    "test" : "npx sass test.scss /dev/null --verbose --no-source-map"
   },
   "homepage": "https://hay.github.io/valenski/",
   "devDependencies": {
-    "marked": "^0.8.0",
+    "marked": "^4.0.12",
     "parcel-bundler": "^1.12.4",
-    "sass": "^1.26.3",
-    "showdown": "^1.9.1"
+    "sass": "^1.49.8",
+    "showdown": "^2.0.0"
   }
 }

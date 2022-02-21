@@ -204,7 +204,14 @@ These are lifted from [Bootstrap](http://getbootstrap.com/css/#grid-options).
     * What `1rem` should be
 * `$valenski-font-size-small: 8px`
     * What `1rem` should be on small devices (<768px)
+* `$valenski-use-small-font-size: true`
+    * Enable the small font sizes for small devices and screens that are not so high.
 
+All of these variables are also available as CSS variables.
+
+    .element {
+        width: var(--screen-xs);
+    }
 
 ## Reset
 **valenski** contains a barebones reset. It only sets margins and paddings to zero, defaults to using `border-box` for `box-sizing` and does some common sense styling for elements like removing the border for the `img` element on Internet Explorer 9. It also sets up the `rem` element so `1rem = 10px`, except for mobile devices (under 768px) and small screens (in height) where it is 8px. Both values can be overwritten using the [`$valenski-font-size-base` and `$valenski-font-size-small` values](#valenski-variables). Using this technique you can do this:
