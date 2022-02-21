@@ -1,7 +1,7 @@
 {
   "name": "valenski",
   "description": "A lightweight set of SASS mixins, classes, resets and values that simplify your workflow.",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "keywords": [
     "css",
     "scss",
