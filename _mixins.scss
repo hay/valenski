@@ -1,3 +1,6 @@
+@use "sass:list";
+@use "values";
+
 @mixin respond-from($min) {
     @media (min-width: $min) {
         @content;
@@ -27,22 +30,22 @@
 }
 
 @mixin pos($coords...) {
-    @if length($coords) == 1 {
+    @if list.length($coords) == 1 {
         // All positions get the same value
-        top: nth($coords, 1);
-        right: nth($coords, 1);
-        bottom: nth($coords,1);
-        left: nth($coords, 1);
-    } @else if length($coords) == 2 {
+        top: list.nth($coords, 1);
+        right: list.nth($coords, 1);
+        bottom: list.nth($coords,1);
+        left: list.nth($coords, 1);
+    } @else if list.length($coords) == 2 {
         // Only give left/top (x,y)
-        left: nth($coords, 1);
-        top: nth($coords, 2);
+        left: list.nth($coords, 1);
+        top: list.nth($coords, 2);
     } @else {
         // Give positions in top-right-bottom-left order
-        top: nth($coords, 1);
-        right: nth($coords, 2);
-        bottom: nth($coords, 3);
-        left: nth($coords, 4);
+        top: list.nth($coords, 1);
+        right: list.nth($coords, 2);
+        bottom: list.nth($coords, 3);
+        left: list.nth($coords, 4);
     }
 }
 
@@ -91,7 +94,7 @@
     margin-right: auto;
 }
 
-@mixin child-margins($spacing: $valenski-base-unit) {
+@mixin child-margins($spacing: values.$valenski-base-unit) {
     > * + * {
         margin-top: $spacing;
     }

@@ -1,63 +1,65 @@
-@import "valenski";
+@use "valenski";
+@use "mixins";
+@use "values";
 
 .respond-from {
-    @include respond-from($screen-xs) {
+    @include mixins.respond-from(values.$screen-xs) {
         display: none;
     }
 }
 
 .respond-until {
-    @include respond-until($screen-sm) {
+    @include mixins.respond-until(values.$screen-sm) {
         display: none;
     }
 }
 
 .respond-between {
-    @include respond-between($screen-md, $screen-lg) {
+    @include mixins.respond-between(values.$screen-md, values.$screen-lg) {
         display: none;
     }
 }
 
 .wh {
-    @include wh(200px, 300px);
+    @include mixins.wh(200px, 300px);
 }
 
 .wh2 {
-    @include wh(200px); // One argument makes width and height equal
+    @include mixins.wh(200px); // One argument makes width and height equal
 }
 
 .pos-1-arg {
-    @include pos(0);
+    @include mixins.pos(0);
 }
 
 .pos-2-arg {
-    @include pos(200px, 100px);
+    @include mixins.pos(200px, 100px);
 }
 
 .pos-4-arg {
-    @include pos(1px, 2px, 3px, 4px);
+    @include mixins.pos(1px, 2px, 3px, 4px);
 }
 
 .clearfix {
-    @include clearfix;
+    @include mixins.clearfix;
 }
 
 .background-center {
-    @include background-center();
+    @include mixins.background-center();
 }
 
 .background-center {
-    @include background-center(contain);
+    @include mixins.background-center(contain);
 }
 
 .margin-center {
-    @include margin-center;
+    @include mixins.margin-center;
 }
 
 .child-margins {
-    @include child-margins;
+    @include mixins.child-margins;
 }
 
 .child-margins-argument {
-    @include child-margins(30px);
+    @include mixins.child-margins(30px);
 }

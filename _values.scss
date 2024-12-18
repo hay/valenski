@@ -9,7 +9,7 @@ $valenski-screen-small-height: 650px !default; // Screens with a small height (n
 $valenski-base-unit: 10px !default;
 $valenski-font-size-base: $valenski-base-unit !default; // Used for setting up rems
 $valenski-font-size-small: 8px !default; // Used for setting up rems on mobile / small screens
-$valenski-use-small-font-size: true !default; // If this is set to false, the small font size won't be used anywhere
+$valenski-use-small-font-size: false !default; // If this is set to true, the small font size will be used on smaller screens
 
 // CSS variables with the same contents
 :root {

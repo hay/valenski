@@ -1,3 +1,6 @@
+@use "mixins";
+@use "values";
+
 * {
     margin: 0;
     padding: 0;
@@ -6,17 +9,17 @@
 }
 
 // Set up stuff for rems, so 1rem = 10px. On mobile and screens with very
-// small height, set it to 8px
+// small height, set it to 8px if $valenski-use-small-font-size is set
 html {
-    font-size: $valenski-font-size-base;
+    font-size: values.$valenski-font-size-base;
 
-    @if $valenski-use-small-font-size {
-        @include respond-until($screen-sm) {
-            font-size: $valenski-font-size-small;
+    @if values.$valenski-use-small-font-size {
+        @include mixins.respond-until(values.$screen-sm) {
+            font-size: values.$valenski-font-size-small;
         }
 
-        @media (max-height: $valenski-screen-small-height) {
-            font-size: $valenski-font-size-small;
+        @media (max-height: values.$valenski-screen-small-height) {
+            font-size: values.$valenski-font-size-small;
         }
     }
 }

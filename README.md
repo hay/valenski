@@ -16,22 +16,26 @@
 * Optional buffer classes for overwriting default margins on elements.
 
 ## Installation
-**valenski** only works with [SASS](http://sass-lang.com/). You'll probably want to use a package manager, such as [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/lang/en/). Then add it to your project:
+**valenski** only works with [SASS](http://sass-lang.com/). You'll probably want to use a package manager, such as [npm](https://www.npmjs.com/). Then add it to your project:
 
     npm install --save valenski
 
 And include the master file in your SASS file.
 
-    @import "node_modules/valenski/valenski";
+    @use "node_modules/valenski/valenski";
+
+Or if you have set the `load-path` properly or if you're using a bundler:
+
+    @use "valenski/valenski";
 
 Optionally you can only include the reset without the classes:
 
-    @import "node_modules/valenski/valenski-reset";
+    @use "valenski/valenski-reset";
 
 Or even just the values and mixins:
 
-    @import "node_modules/valenski/values";
-    @import "node_modules/valenski/mixins";
+    @use "valenski/values";
+    @use "valenski/mixins";
 
 ## Mixins
 **valenski** contains around 20 simple yet powerful utilities.
@@ -39,23 +43,25 @@ Or even just the values and mixins:
 ### `respond-*`
 You can use `respond-from`, `respond-until` and `respond-between` to simplify the writing of media queries. Use these mixins in conjunction with the [screen breakpoint values](#screen-breakpoints).
 
+    @use "valenski/mixins";
+
     .grid {
         display: flex;
         flex-wrap: wrap;
 
-        @include respond-until($screen-sm) {
+        @include mixins.respond-until(values.$screen-sm) {
             li {
                 width: 100%;
             }
         }
 
-        @include respond-between($screen-sm, $screen-md) {
+        @include mixins.respond-between(values.$screen-sm, values.$screen-md) {
             li {
                 width: 50%;
             }
         }
 
-        @include respond-from($screen-md) {
+        @include mixins.respond-from(values.$screen-md) {
             li {
                 width: 25%;
             }
@@ -65,19 +71,23 @@ You can use `respond-from`, `respond-until` and `respond-between` to simplify th
 ### `wh`
 `wh` is a shortcut for the `width` and `height` properties. If you use only one argument `width` and `height` will get the same value.
 
+    @use "valenski/mixins";
+
     header {
-        @include wh(100vw, 20vh);
+        @include mixins.wh(100vw, 20vh);
     }
 
     header h1 {
-        @include wh(20rem);
+        @include mixins.wh(20rem);
     }
 
 ### `pos`
 `pos` is a shortcut for the `top`, `right`, `bottom` and `left` properties.
 
+    @use "valenski/mixins";
+
     .footer {
-        @include pos(50vh, 25%, 25%, 10rem);
+        @include mixins.pos(50vh, 25%, 25%, 10rem);
     }
 
 This is the same as writing
@@ -92,7 +102,7 @@ This is the same as writing
 If only two arguments are given these will be used for the `left` and `top` properties (think of them as `x` and `y`)
 
     .circle {
-        @include pos(300px, 200px);
+        @include mixins.pos(300px, 200px);
     }
 
     .circle {
@@ -103,7 +113,7 @@ If only two arguments are given these will be used for the `left` and `top` prop
 If only one argument is given, `pos` will set the same value to all properties.
 
     .overlay {
-        @include pos(0);
+        @include mixins.pos(0);
     }
 
 This is the same as:
@@ -118,35 +128,41 @@ This is the same as:
 ### `clearfix`
 A mixin for the famous [clearfix](https://css-tricks.com/snippets/css/clear-fix/) hack.
 
+    @use "valenski/mixins";
+
     .clearfix {
-        @include clearfix;
+        @include mixins.clearfix;
     }
 
 ### `transform-center-*`
 Centers an element using the [transform](https://css-tricks.com/centering-percentage-widthheight-elements/) hack. Either horizontal (`transform-center-horizontal`), vertical (`transform-center-vertical`) or both (`transform-center`).
 
+    @use "valenski/mixins";
+
     body {
         position: relative;
-        @include wh(100vw, 100vh);
+        @include mixins.wh(100vw, 100vh);
     }
 
     h1 {
-        @include transform-center; // center both horizontally and vertically
+        @include mixins.transform-center; // center both horizontally and vertically
     }
 
     h2 {
-        @include transform-center-horizontal; // only center horizontally
+        @include mixins.transform-center-horizontal; // only center horizontally
     }
 
     h3 {
-        @include transform-center-vertically; // only center vertically
+        @include mixins.transform-center-vertically; // only center vertically
     }
 
 ### `flex-center`
 Center child elements using flexbox. Compare this to the [transform-center](#-transform-center-) mixins that centers the element you apply it to. If you have more than one child elements they will be aligned on the vertical axis. To align horizontally try `@include flex-center(row);`
 
+    @use "valenski/mixins";
+
     body {
-        @include flex-center;
+        @include mixins.flex-center;
     }
 
     h1 {
@@ -155,34 +171,40 @@ Center child elements using flexbox. Compare this to the [transform-center](#-tr
 
     ul {
         // centers child elements on horizontal axis
-        @include flex-center(row);
+        @include mixins.flex-center(row);
     }
 
 ### `child-margins`
 Set `margin-top` on all child elements using the [lobotomized owl selector](https://alistapart.com/article/axiomatic-css-and-lobotomized-owls). By default uses the `$valenski-base-unit` variable.
 
+    @use "valenski/mixins";
+
     main {
-        @include child-margins(3rem);
+        @include mixins.child-margins(3rem);
     }
 
 ### `background-center`
 Center the `background-image`, by default sizing with the `cover` option. If you want to size with the `contain` option you can give that as an option.
 
+    @use "valenski/mixins";
+
     figure {
-        @include background-center;
+        @include mixins.background-center;
         background-image: url('img/figure.jpg');
     }
 
     body {
-        @include background-center(contain);
+        @include mixins.background-center(contain);
         background-image: url('img/background.jpg');
     }
 
 ### `sr-only`
 Only display content to screen readers. This is the same mixin as used in [Bootstrap 4](https://github.com/twbs/bootstrap/blob/master/scss/mixins/_screen-reader.scss). Note that you can also use the `sr-only` class.
 
+    @use "valenski/mixins";
+
     .sr-notice {
-        @include sr-only;
+        @include mixins.sr-only;
     }
 
 ## Values
@@ -209,12 +231,16 @@ These are lifted from [Bootstrap](http://getbootstrap.com/css/#grid-options).
 
 All of these variables are also available as CSS variables.
 
+    @use "valenski/values";
+
     .element {
         width: var(--screen-xs);
     }
 
 ## Reset
 **valenski** contains a barebones reset. It only sets margins and paddings to zero, defaults to using `border-box` for `box-sizing` and does some common sense styling for elements like removing the border for the `img` element on Internet Explorer 9. It also sets up the `rem` element so `1rem = 10px`, except for mobile devices (under 768px) and small screens (in height) where it is 8px. Both values can be overwritten using the [`$valenski-font-size-base` and `$valenski-font-size-small` values](#valenski-variables). Using this technique you can do this:
+
+    @use "valenski/reset";
 
     p {
         font-size: 2rem; // Translates to 20px and 16px for mobile
@@ -232,3 +258,8 @@ There is also a `sr-only` class you can use to only display content to screen re
 
     <img src="logo.png" alt="Website logo" />
     <h1 class="sr-only">My briliant website</h1>
+
+## Version history
+* 2.0.0 switched from the old `@import` to `@use` syntax. It also set the `$valenski-use-small-font-size` variable to `false` by default.
+* Version 1.5.0 was released on February 21 2022. Note that was the last version that used the `@use` syntax. [See the docs here](https://github.com/hay/valenski/blob/v1.5.0/README.md).
+* The first version of Valenski (0.2.0) was released on January 16th 2015.

@@ -1,20 +1,24 @@
+@use "../../mixins";
+@use "values";
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.8rem;
-    background: $c-1;
+    background: values.$c-1;
+    line-height: 1.3333;
 }
 
 main {
     background: white;
     max-width: 80rem;
     padding: 3rem 1rem;
-    @include margin-center;
-    @include child-margins;
+    @include mixins.margin-center;
+    @include mixins.child-margins(2rem);
 }
 
 h1 {
     text-align: center;
-    color: $c-1;
+    color: values.$c-1;
     font-size: 6rem;
 }
 
@@ -30,6 +34,12 @@ ul {
     margin-left: 3rem;
 }
 
+h2 + p,
+h2 + ul,
+h3 + p {
+    margin-top: 0;
+}
+
 // These two rules are a bit of a dirty hack for styling the header, but oh well
 main > p:nth-of-type(1) {
     margin-top: 0;
@@ -43,7 +53,7 @@ main > p:nth-of-type(3) {
 }
 
 pre {
-    background: $c-2;
+    background: values.$c-2;
     padding: 1rem;
     font-size: 1.6rem;
     overflow-x: auto;

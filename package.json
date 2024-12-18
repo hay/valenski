@@ -18,12 +18,12 @@
   },
   "homepage": "https://hay.github.io/valenski/",
   "devDependencies": {
-    "@parcel/transformer-inline-string": "^2.3.2",
-    "@parcel/transformer-sass": "^2.3.2",
-    "sass": "^1.49.8"
+    "@parcel/transformer-inline-string": "^2.13.3",
+    "@parcel/transformer-sass": "^2.13.3",
+    "sass": "^1.83.0"
   },
   "dependencies": {
-    "marked": "^4.0.12",
-    "parcel": "^2.3.2"
+    "marked": "^15.0.4",
+    "parcel": "^2.13.3"
   }
 }
