@@ -8,13 +8,13 @@
 }
 
 @mixin respond-until($max) {
-    @media (max-width: $max - 1) {
+    @media (max-width: ($max - 1)) {
         @content;
     }
 }
 
 @mixin respond-between($min, $max) {
-    @media (min-width: $min) and (max-width: $max - 1) {
+    @media (min-width: $min) and (max-width: ($max - 1)) {
         @content;
     }
 }
