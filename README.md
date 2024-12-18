@@ -261,5 +261,5 @@ There is also a `sr-only` class you can use to only display content to screen re
 
 ## Version history
 * 2.0.0 switched from the old `@import` to `@use` syntax. It also set the `$valenski-use-small-font-size` variable to `false` by default.
-* Version 1.5.0 was released on February 21 2022. Note that was the last version that used the `@use` syntax. [See the docs here](https://github.com/hay/valenski/blob/v1.5.0/README.md).
+* Version 1.5.0 was released on February 21 2022. Note that was the last version that used the `@import` syntax. [See the docs here if you still want to use that version](https://github.com/hay/valenski/blob/v1.5.0/README.md).
 * The first version of Valenski (0.2.0) was released on January 16th 2015.
